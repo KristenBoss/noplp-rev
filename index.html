@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MéloMémo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>MéloMémo</h1>
+    <p id="user-status">Connexion...</p>
+
+    <section id="add-song">
+      <h2>Ajouter une chanson</h2>
+      <input type="text" id="title" placeholder="Titre"/>
+      <input type="text" id="artist" placeholder="Artiste"/>
+      <textarea id="lyrics" placeholder="Paroles..."></textarea>
+      <button onclick="addSong()">Ajouter</button>
+    </section>
+
+    <section id="song-list">
+      <h2>Répertoire</h2>
+      <ul id="songs"></ul>
+    </section>
+
+    <section id="training" class="hidden">
+      <h2>Entraînement</h2>
+      <label>
+        % mots masqués
+        <select id="maskPercent">
+          <option value="30">30%</option>
+          <option value="50">50%</option>
+          <option value="70">70%</option>
+        </select>
+      </label>
+      <div id="lyrics-area"></div>
+      <button onclick="validate()">Valider</button>
+    </section>
+  </div>
+
+  <script type="module" src="app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+body {
+  font-family: sans-serif;
+  background: #f0f0f0;
+  padding: 2rem;
+}
+.container {
+  max-width: 600px;
+  background: white;
+  padding: 1rem;
+  margin: auto;
+  border-radius: 8px;
+}
+input, textarea, select {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+button {
+  background: #6366f1;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+.hidden-word {
+  display: inline-block;
+  border-bottom: 1px solid #ccc;
+  min-width: 60px;
+  padding: 2px;
+}
+.hidden-word[contenteditable="true"] {
+  background: #eef;
+}
